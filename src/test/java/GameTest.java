@@ -5,16 +5,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 public class GameTest {
 
     @Test
     public void save() {
         Game game = new Game();
 
-        Player player1 = new Player(1,"Masha", 5);
-        Player player2 = new Player(2,"Misha", 2);
+        Player player1 = new Player(1, "Masha", 5);
+        Player player2 = new Player(2, "Misha", 2);
         game.register(player1);
         game.register(player2);
 
@@ -65,6 +63,7 @@ public class GameTest {
         int actual = game.round("Masha", "Misha");
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void notFindFirstName() {
         Game game = new Game();
